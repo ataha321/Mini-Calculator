@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+</head>
+<body>
+    <h1>Mini Calculator</h1>
+    <script>
+        // Prompt the user to enter a number
+        let number1 = parseFloat(prompt("Enter the first number:"));
+
+        // Check if the input is a valid number
+        if (isNaN(number1)) {
+            alert("Invalid input. Please enter a valid number.");
+        } else {
+            // Prompt the user to enter an operator
+            let operator = prompt("Enter an operator (+, -, *, or /):");
+
+            // Check if the input is a valid operator
+            if (operator === "+") {
+                // Prompt the user to enter a second number
+                let number2 = parseFloat(prompt("Enter the second number:"));
+
+                // Check if the second input is a valid number
+                if (isNaN(number2)) {
+                    alert("Invalid input. Please enter a valid number.");
+                } else {
+                    let result = number1 + number2;
+                    alert("Result: " + result);
+                }
+            } else if (operator === "-") {
+                // Prompt the user to enter a second number
+                let number2 = parseFloat(prompt("Enter the second number:"));
+
+                // Check if the second input is a valid number
+                if (isNaN(number2)) {
+                    alert("Invalid input. Please enter a valid number.");
+                } else {
+                    let result = number1 - number2;
+                    alert("Result: " + result);
+                }
+            } else if (operator === "*") {
+                // Prompt the user to enter a second number
+                let number2 = parseFloat(prompt("Enter the second number:"));
+
+                // Check if the second input is a valid number
+                if (isNaN(number2)) {
+                    alert("Invalid input. Please enter a valid number.");
+                } else {
+                    let result = number1 * number2;
+                    alert("Result: " + result);
+                }
+            } else if (operator === "/") {
+                // Prompt the user to enter a second number
+                let number2 = parseFloat(prompt("Enter the second number:"));
+
+                // Check if the second input is a valid number
+                if (isNaN(number2)) {
+                    alert("Invalid input. Please enter a valid number.");
+                } else {
+                    if (number2 === 0) {
+                        alert("Division by zero is not allowed.");
+                    } else {
+                        let result = number1 / number2;
+                        alert("Result: " + result);
+                    }
+                }
+            } else {
+                alert("Invalid operator. Please enter +, -, *, or /.");
+            }
+        }
+    </script>
+</body>
+</html>
